@@ -6,5 +6,4 @@ from . models import Word
 # Create your views here.
 def word_list(request):
     words = Word.objects.all()
-    output = ', '.join([str(word) for word in words])
-    return HttpResponse(output)
+    return render(request, 'words/word_list.html', {'words': words})
