@@ -6,5 +6,5 @@ from . models import Word
 # Create your views here.
 def word_list(request):
     words = Word.objects.all()
-    output = ', '.join([str(words) for word in words])
+    output = ', '.join([str(word) for word in words])
     return HttpResponse(output)
