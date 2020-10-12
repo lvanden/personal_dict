@@ -1,4 +1,6 @@
 {% for word in words %}
 <h2>{{ word.name }}</h2>
-{{ word.definition }}
+<p>{{ word.part_of_speech }} <br>
+{{ word.definition }}<br>
+<i>{{ word.example }}</i><br></p>
 {% endfor %}
